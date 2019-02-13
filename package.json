@@ -1,0 +1,15 @@
+{
+  "name": "hidan",
+  "version": "0.0.1",
+  "description": "A chatbot for Discord",
+  "main": "hidan.js",
+  "repository": "https://github.com/akatsukixyz/hidan",
+  "author": "Yahiko",
+  "license": "MIT",
+  "dependencies": {
+    "dialogflow": "^0.8.0",
+    "discord.js": "discordjs/discord.js",
+    "dotenv": "^6.2.0",
+    "node-fetch": "^2.3.0"
+  }
+}

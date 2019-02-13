@@ -1,0 +1,4 @@
+.env
+Creds.json
+node_modules
+yarn.lock
