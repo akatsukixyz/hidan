@@ -30,7 +30,7 @@ const diag = async (channel, message) => {
         result = response.queryResult;
     if(!response || !result) return await sendMessage(channel, 'Sorry, I didn\'t get that!');
     if(result.fulfillmentText.includes('‌‌ ')) { // Invisible character used as spaces
-        const [author, desc, ...intents] = result.fulfillmentText.split(/‌‌ /g),
+        const { author, desc, ...intents } = JSON.parse(result.fulfillmentText),
             embed = new MessageEmbed()
                 .setAuthor(author)
                 .setDescription(`${desc}\n${intents.join('\n')}`)
