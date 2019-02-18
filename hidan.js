@@ -29,7 +29,7 @@ const projectID = process.env.DIALOGFLOW_PROJECT_ID, sessionID = '123456',
       const { author, desc, intents } = JSON.parse(`{${result.fulfillmentText}}`),
         embed = new MessageEmbed()
           .setAuthor(author)
-          .setDescription(`${desc}\n${intents.join('\n')}`)
+          .setDescription(`${desc}\nIntents: \n\`${intents.join('`\n`')}\``)
           .setColor('#8b818f');
       return await sendMessage(channel, embed);
     }
