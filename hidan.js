@@ -25,7 +25,7 @@ const projectID = process.env.DIALOGFLOW_PROJECT_ID, sessionID = '123456',
     const [response] = await sessionClient.detectIntent(request),
       result = response.queryResult;
     if(!response || !result) return await sendMessage(channel, 'Sorry, I didn\'t get that!');
-    if(result.intent.displayName === 'test') {
+    if(result.intent.displayName === 'help message') {
       const { author, desc, intents } = JSON.parse(`{${result.fulfillmentText}}`),
         embed = new MessageEmbed()
           .setAuthor(author)
